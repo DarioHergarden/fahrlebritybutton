@@ -1,0 +1,28 @@
+/* Hintergrundbild */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    background-image: url('../assets/pictures/question.png'); /* Passe den Pfad an */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Positionierung für den Button-Container */
+#button-container {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.slide__audio {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 120px;
+}

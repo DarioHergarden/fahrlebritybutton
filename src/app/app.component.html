@@ -1,0 +1,14 @@
+<div class="main-background">
+  <!-- Nutze ng-container, um Button1, Button2 oder Button3 basierend auf der Bedingung anzuzeigen -->
+  <ng-container *ngIf="showButton1; else showButton2">
+    <app-button1 (repeat)="loadButton2()"></app-button1>
+  </ng-container>
+  <ng-template #showButton2>
+    <ng-container *ngIf="showButton3; else showButton2Content">
+      <app-button3></app-button3> <!-- Zeige Button3 an -->
+    </ng-container>
+    <ng-template #showButton2Content>
+      <app-button2 (audioEnded)="loadButton3()"></app-button2> <!-- Button2 zeigt Button3 beim Event -->
+    </ng-template>
+  </ng-template>
+</div>

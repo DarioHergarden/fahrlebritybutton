@@ -1,0 +1,91 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+/* Audio-Player und Button-Stile */
+.slide__audio {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 120px;
+    z-index: 1;
+}
+
+.audio__controls {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Sicherstellen, dass es über anderen Elementen liegt */
+}
+
+#circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#seekbar {
+    stroke: #89CFF0; /* Baby blue color */
+    stroke-width: 5;
+    transition: stroke-dashoffset 0.5s ease;
+    fill: none;
+    z-index: 1;
+}
+
+.play-pause {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background: url('../../assets/pictures/teacher.png') no-repeat center center;
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    z-index: 3;
+    color: white;
+    font-size: 24px;
+}
+
+.play-pause i {
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    z-index: 4;
+}
+
+.audio__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.369);
+    z-index: 1; /* Sicherstellen, dass der Slider im Hintergrund bleibt */
+}
+
+#sliderHandle {
+    cursor: pointer; /* Zeigt an, dass der Handle interaktiv ist */
+    fill: #89CFF0; /* Farbe des Handles */
+    stroke: none;
+    z-index: 5; /* Höher als .audio__slider und andere Elemente */
+    transition: transform 0.1s ease; /* Sanfte Animation */
+    pointer-events: auto; /* Ermöglicht Interaktionen */
+}
+
+
+.top-left {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    z-index: 3;
+}
